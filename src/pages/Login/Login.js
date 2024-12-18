@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { 
-  Container, 
-  Paper, 
-  TextField, 
-  Button, 
-  Typography, 
+import {
+  Container,
+  Paper,
+  TextField,
+  Button,
+  Typography,
   Box,
   Link,
   Alert
 } from '@mui/material';
 import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import { useMutation, gql } from '@apollo/client';
-import { LOGIN_MUTATION } from '../client/mutation/user';
+import { LOGIN_MUTATION } from '../../client/mutation/user';
 
 function Login() {
   const navigate = useNavigate();
@@ -44,8 +44,8 @@ function Login() {
     try {
       await login({
         variables: {
-            email: formData.email,
-            password: formData.password
+          email: formData.email,
+          password: formData.password
         }
       });
     } catch (err) {

@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { useNavigate, Link as RouterLink } from "react-router-dom";
 import { useMutation, gql } from "@apollo/client";
-import { REGISTER_MUTATION } from "../client/mutation/user";
+import { REGISTER_MUTATION } from "../../client/mutation/user";
 
 function Register() {
   const navigate = useNavigate();
