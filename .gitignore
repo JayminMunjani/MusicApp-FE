@@ -1,8 +1,16 @@
 # Dependencies
 node_modules/
+.fierbase/
+
+# Build artifacts
+build/
 
 # Environment variables
 .env
 
 # pacakge lock
 package-lock.json
+
+# fierbase config
+fierbase.json
+.firebaserc

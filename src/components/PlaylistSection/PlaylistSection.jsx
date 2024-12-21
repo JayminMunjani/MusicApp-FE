@@ -43,7 +43,8 @@ function PlaylistSection({ playlists = [], setError, refetchPlaylists, selectedP
         createPlaylist({
             variables: {
                 input: {
-                    ...playlistData
+                    name: playlistData?.name,
+                    description: playlistData?.description
                 }
             }
         }).then(() => {
@@ -248,7 +249,7 @@ function PlaylistSection({ playlists = [], setError, refetchPlaylists, selectedP
                                 </Tooltip>
                                 <Tooltip title="Delete playlist">
                                     <IconButton>
-                                        <DeleteSweepOutlinedIcon sx={{ width: '20px', height: '20px' }} onClick={() => handleDeletePlaylist(playlist._id)} />
+                                        <DeleteSweepOutlinedIcon sx={{ width: '20px', height: '20px' }} onClick={() => handleDeletePlaylist(playlist.id)} />
                                     </IconButton>
                                 </Tooltip>
                             </Box>
